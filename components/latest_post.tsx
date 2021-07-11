@@ -9,7 +9,7 @@ export function LatestPost(obj: { latestPost: any }) {
             <Link href="/">
                 <a><h1 className="text-5xl font-bold my-6 hover:underline">{obj.latestPost.title}</h1></a></Link>
             <p>{obj.latestPost.description} </p>
-            <Link href="/"><button className="mt-10 bg-gray-800 p-2 text-lg text-white hover:bg-black">Read blog</button></Link>
+            <Link href={`/posts/${obj.latestPost.id}`}><button className="mt-10 bg-gray-800 p-2 text-lg text-white hover:bg-black">Read blog</button></Link>
         </div>
     </div>
 }
