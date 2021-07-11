@@ -3,7 +3,7 @@ import { AllPosts } from "../components/all_posts"
 import { LatestPost } from "../components/latest_post"
 import { Navbar } from "../components/nav_bar"
 
-export default function Home({ latestPost, allPosts }) {
+export default function Home(obj: { latestPost: any, allPosts: any }) {
   return (
     <div>
       {/* Navbar */}
@@ -11,9 +11,9 @@ export default function Home({ latestPost, allPosts }) {
       {/* Body Section */}
       <div className="mx-4 md:px-8 md:mx-auto md:max-w-5xl">
         {/* Latest Post Section */}
-        <LatestPost latestPost={latestPost} />
+        <LatestPost latestPost={obj.latestPost} />
         {/* All Posts Section */}
-        <AllPosts allPosts={allPosts} />
+        <AllPosts allPosts={obj.allPosts} />
       </div>
     </div>
   )
