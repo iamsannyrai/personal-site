@@ -6,7 +6,7 @@ export function LatestPost(obj: { latestPost: any }) {
         <img src={obj.latestPost.thumbnail} alt="" width="400" />
         <div className="mt-4 md:my-auto">
             <div className="text-sm">{Date(obj.latestPost.date)}</div>
-            <Link href="/">
+            <Link href={`/posts/${obj.latestPost.id}`}>
                 <a><h1 className="text-5xl font-bold my-6 hover:underline">{obj.latestPost.title}</h1></a></Link>
             <p>{obj.latestPost.description} </p>
             <Link href={`/posts/${obj.latestPost.id}`}><button className="mt-10 bg-gray-800 p-2 text-lg text-white hover:bg-black">Read blog</button></Link>
