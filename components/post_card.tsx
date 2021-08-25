@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Date from './date'
 
-export function PostCard({ post }) {
+export function PostCard({ post }: { post: { date: string, id: string, title: string, description: string } }) {
     return <div>
         <img src="./testThumbnail.jpeg" alt="" />
         <div className="mt-4 mb-2 text-sm">{Date(post.date)}</div>
